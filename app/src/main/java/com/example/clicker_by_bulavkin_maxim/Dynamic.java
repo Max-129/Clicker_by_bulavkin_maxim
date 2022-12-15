@@ -53,7 +53,9 @@ public class Dynamic extends Fragment {
                 count--;
                 String x = Integer.toString(count);
                 et_0.setText(x);
-
+                if (count == -20) {
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new  SecondFragment()).commit();
+                }
             }
         });
 
